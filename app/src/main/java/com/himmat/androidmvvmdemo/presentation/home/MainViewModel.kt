@@ -28,7 +28,7 @@ class MainViewModel @Inject constructor(private val userRepository: UserReposito
 
         viewModelScope.launch {
             val users = userRepository.getAllUsers()
-            _userList.postValue(users.userList)
+            _userList.postValue(users)
         }
     }
 }

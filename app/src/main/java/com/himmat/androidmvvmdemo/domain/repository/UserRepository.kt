@@ -1,7 +1,7 @@
 package com.himmat.androidmvvmdemo.domain.repository
 
 import com.himmat.androidmvvmdemo.data.remote.WebApiService
-import com.himmat.androidmvvmdemo.domain.model.users.UserList
+import com.himmat.androidmvvmdemo.domain.model.users.UserListItem
 
 /**
  * Created by Himmat Sawant.
@@ -19,7 +19,7 @@ class UserRepository(private val webApiService: WebApiService) {
 
     private val TAG = "UserRepository"
 
-    suspend fun getAllUsers():UserList{
+    suspend fun getAllUsers():List<UserListItem>{
        return webApiService.getAllUsers()
     }
 }
